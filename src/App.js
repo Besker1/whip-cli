@@ -23,11 +23,11 @@ export default class App extends Component {
   componentDidMount() {
     const url = this.state.url;
     const options = {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         Authorization: "SECRET-API_TOKEN",
       },
-      method: "GET",
     };
     fetch(`${url}`, options)
       .then((res) => res.json())
