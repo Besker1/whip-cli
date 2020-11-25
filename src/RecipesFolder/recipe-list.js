@@ -2,7 +2,11 @@ import Recipes from "./Recipes.js";
 import React from "react";
 
 export default function RecipeList(props) {
-  const recipeList = props.recipes.map((recipe, index) => {
+  let recipes = props.recipes;
+  if (!recipes) {
+    recipes = [];
+  }
+  const recipeList = recipes.map((recipe, index) => {
     return (
       <Recipes
         key={index}
@@ -12,6 +16,7 @@ export default function RecipeList(props) {
       />
     );
   });
-  const recipes = recipeList[Math.floor(Math.random() * recipeList.length)];
-  return <div>{recipes}</div>;
+  // upcoming features
+  // const recipesL = recipeList[Math.floor(Math.random() * recipeList.length)];
+  return <div>{recipeList}</div>;
 }

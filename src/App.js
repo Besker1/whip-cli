@@ -36,7 +36,7 @@ export default class App extends Component {
   /// push the recipe to the recipes found from fetch to the recipes in the state;
   handleRecipe = (data) => {
     this.setState({
-      recipes: data,
+      recipes: data || [],
     });
   };
   // fiilter get called if the state of vegan is true, thus function should be called

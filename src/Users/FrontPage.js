@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, HashRouter as Router } from "react-router-dom";
 import Footer from "./Footer";
 import React from "react";
 
@@ -6,17 +6,19 @@ import React from "react";
 
 export default function FrontPage(props) {
   return (
-    <div className="front-page">
-      {/* <!-- get recipe will be placed in the middle of the page --> */}
-      <div className="entry">
-        <button
-          className="get-recipe-page entry-button"
-          // onClick={props.getRecipes}
-        >
-          <Link to="./recipe">Get Recipe</Link>
-        </button>
+    <Router>
+      <div className="front-page">
+        {/* <!-- get recipe will be placed in the middle of the page --> */}
+        <div className="entry">
+          <button
+            className="get-recipe-page entry-button"
+            // onClick={props.getRecipes}
+          >
+            <Link to="./recipe">Get Recipe</Link>
+          </button>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
