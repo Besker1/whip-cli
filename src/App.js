@@ -16,19 +16,19 @@ export default class App extends Component {
     recipes: [],
     vegan: false,
     meal: "",
-    url: "http://localhost:8000/",
+    url: "https://glacial-savannah-22512.herokuapp.com/",
   };
 
   /// search for recipes using the api based on the data which can be vegan or nothing
   componentDidMount() {
     const url = this.state.url;
     const options = {
-      method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "SECRET-API_TOKEN",
+        Authorization: "Bearer SECRET",
       },
     };
+
     fetch(`${url}`, options)
       .then((res) => res.json())
       .then((res) => this.handleRecipe(res));

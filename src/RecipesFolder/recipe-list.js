@@ -12,7 +12,6 @@ export default function RecipeList(props) {
       />
     );
   });
-  //feature to be added
-  // const recipes = recipeList[Math.floor(Math.random() * recipeList.length)];
-  return <div>{recipeList}</div>;
+  const recipes = recipeList[Math.floor(Math.random() * recipeList.length)];
+  return <div>{recipes}</div>;
 }
