@@ -10,6 +10,7 @@ import RecipeSearchPage from "./RecipesFolder/RecipeSearchPage";
 import Menu from "./Users/Menu";
 import Nav from "./Users/Nav";
 import { whipUpContext } from "./ApiContext";
+import Home from "./Users/Home";
 
 export default class App extends Component {
   state = {
@@ -63,6 +64,12 @@ export default class App extends Component {
                   <Menu />
                   <Route exact path="/">
                     <Nav />
+                  </Route>
+                  <Route exact path="/about">
+                    <Home />
+                  </Route>
+                  <Route exact path="/recipe">
+                    <Home />
                   </Route>
                 </nav>
               </header>

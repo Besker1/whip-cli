@@ -1,4 +1,4 @@
-import { Link, HashRouter as Router } from "react-router-dom";
+import { Link, Route, HashRouter as Router } from "react-router-dom";
 import React from "react";
 
 export default function Nav() {
@@ -9,10 +9,8 @@ export default function Nav() {
           <li>
             <Link to="/about"> About</Link>
           </li>
+
           {/* <li>
-              <Link to="/login"> Login</Link>
-            </li>
-            <li>
               <Link to="/signup"> Sign Up</Link>
             </li> */}
         </ul>
