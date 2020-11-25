@@ -9,16 +9,16 @@ it("RecipeSearch works without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(<RecipeSearch />, div);
 });
-it("Recipes works without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Recipes />, div);
-});
-it("RecipeList works without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<RecipeList />, div);
-});
+// it("Recipes works without crashing", () => {
+//   const div = document.createElement("div");
+//   ReactDOM.render(<Recipes />, div);
+// });
+// it("RecipeList works without crashing", () => {
+//   const div = document.createElement("div");
+//   ReactDOM.render(<RecipeList />, div);
+// });
 
-it("Snapshots without crashing", () => {
-  const tree = renderer.create(<RecipeList />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
+// it("Snapshots without crashing", () => {
+//   const tree = renderer.create(<RecipeList />).toJSON();
+//   expect(tree).toMatchSnapshot();
+// });

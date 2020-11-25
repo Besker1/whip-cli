@@ -16,7 +16,7 @@ export default class App extends Component {
     recipes: [],
     vegan: false,
     meal: "",
-    url: "https://glacial-savannah-22512.herokuapp.com/",
+    url: "",
   };
 
   /// search for recipes using the api based on the data which can be vegan or nothing

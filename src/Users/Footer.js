@@ -17,14 +17,22 @@ export default function Footer() {
 
         <ul>
           <li>
-            <a href="https://linkedin.com/in/besker-telisma" target="_blank">
+            <a
+              href="https://linkedin.com/in/besker-telisma"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               linkedin
             </a>
           </li>
 
           <li>
-            <a href="https://github.com/besker1" target="_blank">
+            <a
+              href="https://github.com/besker1"
+              target="_blank"
+              rel="noreferrer"
+            >
               github
             </a>
           </li>
