@@ -14,7 +14,7 @@ export default function FrontPage(props) {
             className="get-recipe-page entry-button"
             // onClick={props.getRecipes}
           >
-            <Link to="./recipe">Get Recipe</Link>
+            <Link to="/recipe">Get Recipe</Link>
           </button>
         </div>
         <Footer />

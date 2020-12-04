@@ -352,6 +352,7 @@ form {
   color: white;
   text-align: center;
   padding: 1em;
+  cursor: pointer;
 }
 
 .selections:hover {

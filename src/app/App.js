@@ -14,6 +14,7 @@ import Home from "../Users/navigation/Home";
 import PublicOnlyRoute from "../Users/Utils/PublicRoute";
 import PrivateRoute from "../Users/Utils/PrivateRoute";
 import CreateRecipes from "../RecipesFolder/CreateRecipe";
+import RecipeFrontPage from "../RecipesFolder/FirstRecipes/RecipeFront";
 
 export default class App extends Component {
   state = {
@@ -56,6 +57,15 @@ export default class App extends Component {
     });
   };
 
+  renderPath = () => {
+    const newPath = ["/about, /recipe, /create"];
+    return newPath.map((path) => (
+      <Route path={path}>
+        <Home />
+      </Route>
+    ));
+  };
+
   render() {
     return (
       <whipUpContext.Provider value={this.state}>
@@ -68,27 +78,31 @@ export default class App extends Component {
                   <Route exact path="/">
                     <Nav />
                   </Route>
-                  <Route exact path="/about">
-                    <Home />
-                  </Route>
-                  <Route exact path="/recipe">
-                    <Home />
-                  </Route>
+                  {this.renderPath()}
                 </nav>
               </header>
             </main>
             <div>
+              {/* <Route exact path="/" component={RecipeFrontPage} /> */}
               <Route exact path="/" component={FrontPage} />
               <Route exact path="/about" component={AboutPage} />
               <PublicOnlyRoute path="/login" component={LoginPage} />
               <PublicOnlyRoute path="signUp" component={SignUpPage} />
-
-              <Route path="/recipe">
-                <RecipeSearchPage
+              <Route exact path="/recipe">
+                <RecipeFrontPage
                   filterRecipeType={this.filterRecipeType}
                   filterVeganType={this.filterVeganType}
                 />
               </Route>
+
+              {/* <Route path="/recipe"></Route> */}
+              <PrivateRoute path="/allRecipes">
+                <RecipeSearchPage
+                  filterRecipeType={this.filterRecipeType}
+                  filterVeganType={this.filterVeganType}
+                />
+              </PrivateRoute>
+
               <PrivateRoute path="/create" component={CreateRecipes} />
             </div>
           </div>

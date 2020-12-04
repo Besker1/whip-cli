@@ -3,7 +3,7 @@ import React from "react";
 import { whipUpContext } from "../../contexts/ApiContext";
 import FirstRecipeList from "./FirstRecipeList";
 
-export default function RecipeSearchPage(props) {
+export default function RecipeFrontPage(props) {
   //// use props to get the filter function from app.js
   /// use context to access other items from the state
   return (

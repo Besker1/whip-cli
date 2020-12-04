@@ -26,7 +26,7 @@ export default function RecipeSearchPage(props) {
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
             </select>
-            <Link to="create">
+            <Link to="/create">
               <div className="create">
                 <label> Add+ </label>
               </div>
