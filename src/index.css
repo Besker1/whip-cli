@@ -1,12 +1,12 @@
-body {
+/* body {
   text-align: center;
   font-family: sans-serif;
   box-sizing: border-box;
 }
 ul li {
-  list-style: none;
-  /* margin: 10px; */
-  font-size: 20px;
+  list-style: none; */
+/* margin: 10px; */
+/* font-size: 20px;
   text-align: center;
 }
 
@@ -73,6 +73,214 @@ footer {
 
 .sign-form input {
   display: flex;
+  padding: 20px; */
+/* justif: start; */
+/* }
+
+button {
+  padding: 10px;
+  margin: 20px 100px 200px 100px;
+} */
+
+/* recipes css 
+.container {
+  border: black solid 5px;
+  margin: 20px 0 20px;
+  animation: recipeFade 0.5s ease forwards 7s; */
+/*padding: 0; */
+/* } */
+
+/*recipe css and animation*/
+/* .recipe ul {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+  animation: 0.5s cubic-bezier(0.4, 0, 1, 1) forwards 7s;
+}
+
+.front-page {
+  width: 100%;
+  height: 100%;
+}
+
+.front-page::after {
+  content: "";
+  background: url(https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+} */
+
+/* file links  */
+/* a:visited {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+} */
+
+/* filter selections  */
+/* .selections {
+  margin-right: 50px;
+  padding: 0.5em;
+  border-radius: 8px;
+  background: #1977f3;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+.selections:hover {
+  color: #eef5fe;
+  padding: 1.5em;
+  border-radius: 8px;
+  background: #1977f3;
+  cursor: pointer;
+}
+
+.vegan {
+  margin-left: 50px;
+  background: green;
+  padding: 1em;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+@media all and (min-width: 690px) { */
+/* recipes css  */
+/* .container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    border: black solid 5px;
+    margin: 20px 0 20px;
+    padding: 0;
+  }
+
+  .results {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    animation: slidesIn 0.5 ease forwards 3/7;
+  }
+}
+@keyframes slidesIn {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+} */
+
+/* about section  */
+
+/* @media all and (min-width: 600px) {
+  .about {
+    margin: 10%;
+    font-size: 50px;
+  }
+} */
+
+/* /////////////////// */
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+  /* margin: 10px; */
+  font-size: 20px;
+  text-align: center;
+}
+
+body header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.entry {
+  display: flex;
+  justify-content: center;
+  margin: 160px auto;
+}
+
+.entry :hover {
+  /* color: #eef5fe; */
+  /* border-radius: 8px; */
+  background: #1977f3;
+}
+
+.entry-button {
+  padding: 50px;
+  background: #eeeeee;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+footer ul,
+.menu ul {
+  display: flex;
+  flex-flow: row;
+}
+footer ul li {
+  margin: 10px;
+}
+
+.menu ul li :hover {
+  color: #eef5fe;
+  padding: 0.5em;
+  border-radius: 8px;
+  background: #1977f3;
+}
+
+.menu ul li {
+  margin: 10px;
+  animation: slidesIn 0.5 ease forwards 3/7;
+}
+
+.logo img {
+  width: 100px;
+}
+.logo {
+  display: flex;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sign-form input {
+  display: flex;
   padding: 20px;
   /* justif: start; */
 }
@@ -86,8 +294,6 @@ button {
 .container {
   border: black solid 5px;
   margin: 20px 0 20px;
-  animation: recipeFade 0.5s ease forwards 7s;
-  /*padding: 0; */
 }
 
 /*recipe css and animation*/
@@ -95,7 +301,6 @@ button {
   display: flex;
   flex-flow: column;
   padding: 20px;
-  animation: 0.5s cubic-bezier(0.4, 0, 1, 1) forwards 7s;
 }
 
 .front-page {
@@ -163,6 +368,17 @@ select {
   -webkit-appearance: none;
 }
 
+/* able to add to add new recipes to the show */
+
+.posing {
+  display: flex;
+  flex-direction: row;
+}
+.formAction {
+  display: flex;
+  flex-flow: column;
+}
+
 @media all and (min-width: 690px) {
   /* recipes css  */
   .container {
@@ -174,13 +390,32 @@ select {
     padding: 0;
   }
 
+  .sign-form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 50px 500px;
+  }
+
+  .sign-form input {
+    display: flex;
+    padding: 20px;
+  }
+
   .results {
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
     animation: slidesIn 0.5 ease forwards 3/7;
   }
+
+  /* //// submitting forms  */
+  .formAction {
+    box-sizing: border-box;
+    margin: 0 25%;
+  }
 }
+
 @keyframes slidesIn {
   from {
     opacity: 0;
@@ -193,10 +428,3 @@ select {
 }
 
 /* about section  */
-
-@media all and (min-width: 600px) {
-  .about {
-    margin: 10%;
-    font-size: 50px;
-  }
-}

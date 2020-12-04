@@ -1,7 +1,6 @@
-import Footer from "../navs/Footer";
+import Footer from "../navigation/Footer";
 // import Apicontext from "";
 import React, { Component } from "react";
-import { Button, Input } from "../Utils/Utils";
 import TokenService from "../../services/Token-service";
 
 export default class LoginForm extends Component {
@@ -27,21 +26,18 @@ export default class LoginForm extends Component {
     const { error } = this.state;
     return (
       <div>
-        <form className="LoginForm" onSubmit={this.handleSubmitBasicAuth}>
+        <h1>Login</h1>
+        <form
+          action="post"
+          className="sign-form"
+          onSubmit={this.handleSubmitBasicAuth}
+        >
           <div role="alert">{error && <p className="red">{error}</p>}</div>
-          <div className="user_name">
-            <label htmlFor="LoginForm__user_name">User name</label>
-            <Input name="user_name" id="LoginForm__user_name"></Input>
-          </div>
-          <div className="password">
-            <label htmlFor="LoginForm__password">Password</label>
-            <Input
-              name="password"
-              type="password"
-              id="LoginForm__password"
-            ></Input>
-          </div>
-          <Button type="submit">Login</Button>
+          <label for="user_name"> Username</label>
+          <input type="text" name="user_name" placeholder="Username" Email />
+          <label for="password">Password</label>
+          <input type="text" name="password" id="" placeholder="password" />
+          <button>Submit</button>
         </form>
         <Footer />
       </div>

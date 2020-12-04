@@ -5,6 +5,17 @@ export const nullRecipe = {
   tags: [],
 };
 
+export const whipUpContext = React.createContext({
+  recipe: [],
+  vegan: false,
+  meal: "",
+  newRecipe: {
+    title: "",
+    vegan: false,
+    content: [],
+  },
+});
+
 const RecipeContext = React.createContext({
   recipe: nullRecipe,
   comments: [],

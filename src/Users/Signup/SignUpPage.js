@@ -1,21 +1,27 @@
-import Footer from "./Footer";
-import React from 'react'
+import React, { Component } from "react";
+import { Section } from "../Utils/Utils";
+import RegistrationForm from "./SignForm";
 
-export default function SignUp(){
+export default class RegistrationPage extends Component {
+  static defaultProps = {
+    history: {
+      push: () => {},
+    },
+  };
+
+  handleRegistrationSuccess = (user) => {
+    const { history } = this.props;
+    history.push("/login");
+  };
+
+  render() {
     return (
-        <div>
-                    <h1>Signup</h1>
-    <form action="post" className='sign-form'>
-        <label for="email"> Email:</label>
-        <input type="text" placeholder="email" Email/>
-        <label for="password">Password</label>
-        <input type="text" name="password" id="" placeholder="password"/>
-        <label for="password"> confirm password</label>
-        <input type="text" name="password" id="" placeholder="confirm password"/>
-        <button>Submit</button>
-    </form>
-                    <Footer/>
-
-        </div>
-    )
+      <Section className="RegistrationPage">
+        <h2>Register</h2>
+        <RegistrationForm
+          onRegistrationSuccess={this.handleRegistrationSuccess}
+        />
+      </Section>
+    );
+  }
 }

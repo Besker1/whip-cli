@@ -1,16 +1,17 @@
 import "./App.css";
-import "./index.css";
+import "../index.css";
 import { React, Component } from "react";
 import FrontPage from "../Users/FrontPage";
 import { Route, HashRouter as Router } from "react-router-dom";
 import AboutPage from "../Users/AboutPage";
 import LoginPage from "../Users/Login/LoginForm";
-import SignUpPage from "../Users/SignUpPage";
+import SignUpPage from "../Users/Signup/SignUpPage";
 import RecipeSearchPage from "../RecipesFolder/RecipeSearchPage";
-import Menu from "./Users/Menu";
-import Nav from "./Users/Nav";
+import Menu from "../Users/navigation/Menu";
+import Nav from "../Users/navigation/Nav";
 import { whipUpContext } from "../contexts/ApiContext";
-import Home from "./Users/Home";
+import Home from "../Users/navigation/Home";
+import PublicOnlyRoute from "../Users/Utils/PublicRoute";
 
 export default class App extends Component {
   state = {
@@ -77,8 +78,10 @@ export default class App extends Component {
             <div>
               <Route exact path="/" component={FrontPage} />
               <Route exact path="/about" component={AboutPage} />
-              <Route path="/login" component={LoginPage} />
-              <Route path="/signup" component={SignUpPage} />
+              <PublicOnlyRoute path="/login" component={LoginPage} />
+              <PublicOnlyRoute path="signup" component={SignUpPage} />
+              {/* <Route path="/login" component={LoginPage} /> */}
+              {/* <Route path="/signup" component={SignUpPage} /> */}
               <Route path="/recipe">
                 <RecipeSearchPage
                   filterRecipeType={this.filterRecipeType}
