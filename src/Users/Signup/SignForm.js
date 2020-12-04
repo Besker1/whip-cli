@@ -6,7 +6,7 @@ export default function SignUp() {
     <div>
       <h1>Signup</h1>
       <form action="post" className="sign-form">
-        <label for="email"> Email:</label>
+        <label for="uer_name"> Username:</label>
         <input type="text" placeholder="email" Email />
         <label for="password">Password</label>
         <input type="text" name="password" id="" placeholder="password" />

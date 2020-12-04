@@ -346,6 +346,14 @@ form {
   font-size: 15px;
 }
 
+.create {
+  border-radius: 8px;
+  background: #1977f3;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
 .selections:hover {
   color: #eef5fe;
   padding: 1.5em;

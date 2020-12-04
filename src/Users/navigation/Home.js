@@ -22,11 +22,11 @@ export default class Home extends Component {
 
   renderLogoutLink() {
     return (
-      <div className="Header__logged-in">
+      <li>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
-      </div>
+      </li>
     );
   }
 
@@ -34,7 +34,7 @@ export default class Home extends Component {
     return (
       <div className="Header__not-logged-in">
         <li>
-          <Link to="/register">Register</Link>
+          <Link to="/signUp">Sign up</Link>
         </li>
         <li>
           <Link to="/login">Log in</Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import TokenService from "../services/Token-service";
 export default function Recipes(props) {
   let content = props.content;
   if (!content) {
@@ -9,7 +10,7 @@ export default function Recipes(props) {
     <div className="container">
       <div className="recipe">
         <h1>{props.title}</h1>
-        <ul>{newContent}</ul>
+        {TokenService.hasAuthToken ? <ul>{newContent}</ul> : ""}
       </div>
     </div>
   );

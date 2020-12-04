@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { whipUpContext } from "../contexts/ApiContext";
-import RecipeApiService from "../../Services/API";
+import ApiContext, { whipUpContext } from "../contexts/ApiContext";
+import RecipeApiService from "../services/Api-service";
 
 export default class CreateRecipes extends Component {
   static contextType = whipUpContext;
-
+  static contextType = ApiContext;
   handleSubmit = (ev) => {
     ev.preventDefault();
-    const { recipe } = this.context;
     const { title, vegan, recipes } = ev.target;
     const leRecipe = [recipes];
     let newRecipe = {
@@ -16,7 +15,7 @@ export default class CreateRecipes extends Component {
       leRecipe,
     };
 
-    RecipeApiService.createRecipes(recipe.id, newRecipe)
+    RecipeApiService.createRecipes(newRecipe)
       .then(this.context.addRecipes)
       .then(() => {
         newRecipe = {};

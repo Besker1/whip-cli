@@ -2,7 +2,7 @@ import Footer from "../navigation/Footer";
 // import Apicontext from "";
 import React, { Component } from "react";
 import TokenService from "../../services/Token-service";
-
+import { Link } from "react-router-dom";
 export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {},
@@ -33,9 +33,9 @@ export default class LoginForm extends Component {
           onSubmit={this.handleSubmitBasicAuth}
         >
           <div role="alert">{error && <p className="red">{error}</p>}</div>
-          <label for="user_name"> Username</label>
-          <input type="text" name="user_name" placeholder="Username" Email />
-          <label for="password">Password</label>
+          <label htmlFor="user_name"> Username</label>
+          <input type="text" name="user_name" placeholder="Username" />
+          <label htmlFor="password">Password</label>
           <input type="text" name="password" id="" placeholder="password" />
           <button>Submit</button>
         </form>

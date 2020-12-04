@@ -1,8 +1,7 @@
 // import RecipeList from "./recipe-list";
 import React from "react";
-import { whipUpContext } from "../contexts/ApiContext";
-import RecipeList from "./recipe-list";
-import { Link } from "react-router-dom";
+import { whipUpContext } from "../../contexts/ApiContext";
+import FirstRecipeList from "./FirstRecipeList";
 
 export default function RecipeSearchPage(props) {
   //// use props to get the filter function from app.js
@@ -26,11 +25,6 @@ export default function RecipeSearchPage(props) {
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
             </select>
-            <Link to="create">
-              <div className="create">
-                <label> Add+ </label>
-              </div>
-            </Link>
 
             <div className="vegan">
               <label htmlFor="vegan-option">Vegan</label>
@@ -47,7 +41,7 @@ export default function RecipeSearchPage(props) {
           </form>
 
           <div className="results">
-            <RecipeList
+            <FirstRecipeList
               /// filter out possible functions on ui by meals or vegan
               recipes={recipes
                 .filter((recipe) => {

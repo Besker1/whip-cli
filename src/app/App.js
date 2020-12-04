@@ -12,6 +12,8 @@ import Nav from "../Users/navigation/Nav";
 import { whipUpContext } from "../contexts/ApiContext";
 import Home from "../Users/navigation/Home";
 import PublicOnlyRoute from "../Users/Utils/PublicRoute";
+import PrivateRoute from "../Users/Utils/PrivateRoute";
+import CreateRecipes from "../RecipesFolder/CreateRecipe";
 
 export default class App extends Component {
   state = {
@@ -79,15 +81,15 @@ export default class App extends Component {
               <Route exact path="/" component={FrontPage} />
               <Route exact path="/about" component={AboutPage} />
               <PublicOnlyRoute path="/login" component={LoginPage} />
-              <PublicOnlyRoute path="signup" component={SignUpPage} />
-              {/* <Route path="/login" component={LoginPage} /> */}
-              {/* <Route path="/signup" component={SignUpPage} /> */}
+              <PublicOnlyRoute path="signUp" component={SignUpPage} />
+
               <Route path="/recipe">
                 <RecipeSearchPage
                   filterRecipeType={this.filterRecipeType}
                   filterVeganType={this.filterVeganType}
                 />
               </Route>
+              <PrivateRoute path="/create" component={CreateRecipes} />
             </div>
           </div>
         </Router>

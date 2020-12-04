@@ -1,5 +1,5 @@
 import config from "./config";
-import TokenService from "./TokenService";
+import TokenService from "./Token-service";
 const RecipeApiService = {
   getRecipes() {
     return fetch(`${config.API_ENDPOINT}`, {
