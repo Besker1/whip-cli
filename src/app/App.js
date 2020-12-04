@@ -1,15 +1,15 @@
 import "./App.css";
 import "./index.css";
 import { React, Component } from "react";
-import FrontPage from "./Users/FrontPage";
+import FrontPage from "../Users/FrontPage";
 import { Route, HashRouter as Router } from "react-router-dom";
-import AboutPage from "./Users/AboutPage";
-import LoginPage from "./Users/LoginPage";
-import SignUpPage from "./Users/SignUpPage";
-import RecipeSearchPage from "./RecipesFolder/RecipeSearchPage";
+import AboutPage from "../Users/AboutPage";
+import LoginPage from "../Users/Login/LoginForm";
+import SignUpPage from "../Users/SignUpPage";
+import RecipeSearchPage from "../RecipesFolder/RecipeSearchPage";
 import Menu from "./Users/Menu";
 import Nav from "./Users/Nav";
-import { whipUpContext } from "./ApiContext";
+import { whipUpContext } from "../contexts/ApiContext";
 import Home from "./Users/Home";
 
 export default class App extends Component {

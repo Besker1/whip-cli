@@ -1,5 +1,5 @@
 import { Link, HashRouter as Router } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./navigation/Footer";
 import React from "react";
 
 // import RecipesRouter from '../RecipesFolder/RecipesRouters'

@@ -1,6 +1,6 @@
 // import RecipeList from "./recipe-list";
 import React from "react";
-import { whipUpContext } from "../ApiContext";
+import { whipUpContext } from "../contexts/ApiContext";
 import RecipeList from "./recipe-list";
 
 export default function RecipeSearchPage(props) {
