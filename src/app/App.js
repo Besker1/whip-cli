@@ -57,15 +57,6 @@ export default class App extends Component {
     });
   };
 
-  renderPath = () => {
-    const newPath = ["/about, /recipe, /create"];
-    return newPath.map((path) => (
-      <Route path={path}>
-        <Home />
-      </Route>
-    ));
-  };
-
   render() {
     return (
       <whipUpContext.Provider value={this.state}>
@@ -78,7 +69,13 @@ export default class App extends Component {
                   <Route exact path="/">
                     <Nav />
                   </Route>
-                  {this.renderPath()}
+
+                  <Route exact path="/about">
+                    <Home />
+                  </Route>
+                  <Route exact path="/recipe">
+                    <Home />
+                  </Route>
                 </nav>
               </header>
             </main>
