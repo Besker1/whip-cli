@@ -223,7 +223,10 @@ body header nav {
 .entry {
   display: flex;
   justify-content: center;
-  margin: 160px auto;
+  margin: 210px auto;
+}
+.body {
+  padding-top: 100px;
 }
 
 .entry :hover {
@@ -434,6 +437,17 @@ select {
     opacity: 1;
     transform: translate(0px);
   }
+}
+
+.navigation {
+  z-index: 2;
+  box-shadow: 2px 5px 10px gray;
+  background: white;
+  position: fixed;
+  /* margin-bottom: 500px; */
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* about section  */

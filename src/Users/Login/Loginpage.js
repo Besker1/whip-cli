@@ -12,7 +12,7 @@ export default class LoginPage extends Component {
 
   handleLoginSuccess = () => {
     const { location, history } = this.props;
-    const destination = (location.state || {}).from || "recipe";
+    const destination = (location.state || {}).from || "/";
     history.push(destination);
   };
 
@@ -20,8 +20,9 @@ export default class LoginPage extends Component {
     return (
       <Section className="LoginPage">
         <h2>Login</h2>
-        <LoginForm onLoginSuccess={this.handleLoginSuccess} />
+        <LoginForm {...this.props} />
       </Section>
     );
   }
 }
+// onLoginSuccess={this.handleLoginSuccess}

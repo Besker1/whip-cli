@@ -1,4 +1,4 @@
-import { Link, Route, HashRouter as Router } from "react-router-dom";
+import { Link, HashRouter as Router } from "react-router-dom";
 import React from "react";
 
 export default function Nav() {

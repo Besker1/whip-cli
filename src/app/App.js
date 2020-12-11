@@ -84,7 +84,7 @@ export default class App extends Component {
               <Route exact path="/" component={FrontPage} />
               <Route exact path="/about" component={AboutPage} />
               <PublicOnlyRoute path="/login" component={LoginPage} />
-              <PublicOnlyRoute path="signUp" component={SignUpPage} />
+              <PublicOnlyRoute path="/signUp" component={SignUpPage} />
               <Route exact path="/recipe">
                 <RecipeFrontPage
                   filterRecipeType={this.filterRecipeType}
