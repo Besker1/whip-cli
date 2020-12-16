@@ -11,7 +11,7 @@ export default function FirstRecipeList(props) {
       <Recipes
         key={index}
         title={recipe.title}
-        image={recipe.img}
+        // image={recipe.img}
         content={recipe.content}
       />
     );

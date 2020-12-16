@@ -1,5 +1,6 @@
 import React from "react";
 import TokenService from "../services/Token-service";
+import ApiService from "../services/Api-service";
 export default function Recipes(props) {
   let content = props.content;
   if (!content) {
@@ -11,6 +12,12 @@ export default function Recipes(props) {
       <div className="recipe">
         <h1>{props.title}</h1>
         {TokenService.hasAuthToken ? <ul>{newContent}</ul> : ""}
+        <button
+          onClick={(e) => {
+            ApiService.deleteRecipes(props.recipeId);
+          }}
+          value="delete"
+        />
       </div>
     </div>
   );

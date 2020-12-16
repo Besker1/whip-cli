@@ -6,7 +6,7 @@ export default function Recipes(props) {
       <div className="container">
         <div className="recipe">
           <h1>{props.title}</h1>
-          <img src={props.img} alt="food" />
+          {/* <img src={props.img} alt="food" /> */}
         </div>
       </div>
     </Link>

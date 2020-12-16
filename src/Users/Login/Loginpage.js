@@ -25,4 +25,3 @@ export default class LoginPage extends Component {
     );
   }
 }
-// onLoginSuccess={this.handleLoginSuccess}

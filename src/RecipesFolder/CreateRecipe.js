@@ -3,16 +3,21 @@ import ApiContext, { whipUpContext } from "../contexts/ApiContext";
 import RecipeApiService from "../services/Api-service";
 
 export default class CreateRecipes extends Component {
+  state = {
+    //update in react
+    recipes: "",
+    // use .split(/n)
+  };
   static contextType = whipUpContext;
   static contextType = ApiContext;
   handleSubmit = (ev) => {
     ev.preventDefault();
-    const { title, vegan, recipes } = ev.target;
-    const leRecipe = [recipes];
+    debugger;
+    const { title, vegan = false, recipes } = ev.target;
     let newRecipe = {
       title,
       vegan,
-      leRecipe,
+      recipes,
     };
 
     RecipeApiService.createRecipes(newRecipe)
@@ -22,7 +27,6 @@ export default class CreateRecipes extends Component {
       })
       .catch(this.context.setError);
   };
-
   render() {
     return (
       <div className="formClass">

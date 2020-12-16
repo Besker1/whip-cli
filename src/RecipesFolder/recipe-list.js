@@ -10,6 +10,7 @@ export default function RecipeList(props) {
     return (
       <Recipes
         key={index}
+        recipeId={recipe.id}
         title={recipe.title}
         image={recipe.img}
         content={recipe.content}
