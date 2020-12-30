@@ -1,4 +1,4 @@
-import Footer from "../navigation/Footer";
+// import Footer from "../navigation/Footer";
 // import Apicontext from "";
 import React, { Component } from "react";
 import TokenService from "../../services/Token-service";

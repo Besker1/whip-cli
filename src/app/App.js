@@ -2,7 +2,7 @@ import "./App.css";
 import "../index.css";
 import { React, Component } from "react";
 import FrontPage from "../Users/FrontPage";
-import { Route, HashRouter as Router } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import AboutPage from "../Users/AboutPage";
 import LoginPage from "../Users/Login/LoginForm";
 import SignUpPage from "../Users/Signup/SignUpPage";
@@ -15,15 +15,16 @@ import PublicOnlyRoute from "../Users/Utils/PublicRoute";
 import PrivateRoute from "../Users/Utils/PrivateRoute";
 import CreateRecipes from "../RecipesFolder/CreateRecipe";
 import RecipeFrontPage from "../RecipesFolder/FirstRecipes/RecipeFront";
+import EditRecipes from "../RecipesFolder/EditRecipes";
 
 export default class App extends Component {
   state = {
     recipes: [],
     vegan: false,
     meal: "",
-    url: "https://glacial-savannah-22512.herokuapp.com/",
+    url: "http://localhost:8000",
   };
-
+  // "https://glacial-savannah-22512.herokuapp.com/"
   /// search for recipes using the api based on the data which can be vegan or nothing
   componentDidMount() {
     const url = this.state.url;
@@ -80,19 +81,24 @@ export default class App extends Component {
               </header>
             </main>
             <div>
+              <Switch>
+                <Route exact path="/" component={FrontPage} />
+                <Route path="/edit/:id" component={EditRecipes} />
+                <Route exact path="/about" component={AboutPage} />
+
+                <Route exact path="/recipe">
+                  <RecipeFrontPage
+                    filterRecipeType={this.filterRecipeType}
+                    filterVeganType={this.filterVeganType}
+                  />
+                </Route>
+              </Switch>
               {/* <Route exact path="/" component={RecipeFrontPage} /> */}
-              <Route exact path="/" component={FrontPage} />
-              <Route exact path="/about" component={AboutPage} />
-              <PublicOnlyRoute path="/login" component={LoginPage} />
-              <PublicOnlyRoute path="/signUp" component={SignUpPage} />
-              <Route exact path="/recipe">
-                <RecipeFrontPage
-                  filterRecipeType={this.filterRecipeType}
-                  filterVeganType={this.filterVeganType}
-                />
-              </Route>
 
               {/* <Route path="/recipe"></Route> */}
+              <PublicOnlyRoute path="/login" component={LoginPage} />
+              <PublicOnlyRoute path="/signUp" component={SignUpPage} />
+
               <PrivateRoute path="/allRecipes">
                 <RecipeSearchPage
                   filterRecipeType={this.filterRecipeType}

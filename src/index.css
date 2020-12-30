@@ -428,6 +428,9 @@ select {
   }
 }
 
+.formClass {
+  margin-top: 150px;
+}
 @keyframes slidesIn {
   from {
     opacity: 0;

@@ -6,6 +6,9 @@ export default function RecipeList(props) {
   if (!recipes) {
     recipes = [];
   }
+  const handleReset = () => {
+    this.props.history.push("allRecipes");
+  };
   const recipeList = recipes.map((recipe, index) => {
     return (
       <Recipes
@@ -14,6 +17,7 @@ export default function RecipeList(props) {
         title={recipe.title}
         image={recipe.img}
         content={recipe.content}
+        reset={(e) => handleReset()}
       />
     );
   });
