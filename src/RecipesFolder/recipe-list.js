@@ -1,23 +1,38 @@
 import Recipes from "./Recipes.js";
-import React from "react";
+import React, { Component } from "react";
+import { whipUpContext } from "../contexts/ApiContext";
 
 export default function RecipeList(props) {
+  // static contextType = whipUpContext;
+
+  // static defaultProps = {
+  //   location: {},
+  //   history: {
+  //     push: () => {},
+  //   },
+  //   recipes: [],
+  // };
+
+  // state = {
+  //   recipes: this.props.recipes || [],
+  // };
+
+  // let recipes = this.context;
   let recipes = props.recipes;
   if (!recipes) {
     recipes = [];
   }
-  const handleReset = () => {
-    this.props.history.push("allRecipes");
-  };
   const recipeList = recipes.map((recipe, index) => {
     return (
       <Recipes
+        // {...this.props}
         key={index}
         recipeId={recipe.id}
         title={recipe.title}
+        meal={recipe.meal}
+        vegan={recipe.is_vegan ? "Woww! vegan options" : ""}
         image={recipe.img}
         content={recipe.content}
-        reset={(e) => handleReset()}
       />
     );
   });

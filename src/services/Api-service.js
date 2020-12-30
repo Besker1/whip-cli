@@ -41,14 +41,16 @@ const RecipeApiService = {
     });
   },
 
-  updateRecipes(id, newValue) {
-    return fetch(`${config.API_ENDPOINT}/recipe/${id}`, {
+  updateRecipes(newValue) {
+    debugger;
+    return fetch(`${config.API_ENDPOINT}/recipe/${newValue.id}`, {
       method: "PATCH",
       "Content-type": "application/json",
       authorization: `bearer ${TokenService.getAuthToken()}`,
-      body: JSON.stringify({
-        newValue,
-      }),
+      body: JSON.stringify(newValue),
+    }).then((res) => {
+      debugger;
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json();
     });
   },
 };

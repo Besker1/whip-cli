@@ -9,22 +9,16 @@ export default class EditRecipes extends Component {
       content: "",
       meal: "",
       is_vegan: false,
-      img: "",
     };
   }
 
   handleSubmit(ev) {
-    const newRecipe = {
-      title: this.state.title,
-      content: this.state.content,
-      meal: this.state.meal,
-      is_vegan: this.state.is_vegan,
-      img: this.state.value,
-    };
-    let id = this.state.id;
-    console.log(newRecipe);
+    console.log("the new state", this.state);
     ev.preventDefault();
-    ApiService.updateRecipes(id, newRecipe);
+    debugger;
+    // let id = this.state.id;
+    ApiService.updateRecipes(this.state);
+    this.props.history.push("/allRecipes");
   }
 
   componentWillMount() {
